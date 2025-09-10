@@ -1,0 +1,11 @@
+nyc_taxi:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: dbuser
+      password: dbpass
+      port: 5432
+      dbname: nyc
+      schema: public

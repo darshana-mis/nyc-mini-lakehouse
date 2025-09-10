@@ -1,0 +1,14 @@
+name: nyc_taxi
+version: 1.0.0
+profile: nyc_taxi
+model-paths: ["models"]
+
+models:
+  nyc_taxi:
+    +materialized: view
+    staging:
+      +schema: staging
+    silver:
+      +schema: silver
+    marts:
+      +schema: marts
