@@ -29,8 +29,8 @@ services:
     environment:
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://dbuser:dbpass@postgres:5432/nyc
-      AIRFLOW__WEBSERVER__SECRET_KEY: supersecret
-      _PIP_ADDITIONAL_REQUIREMENTS: "psycopg2-binary pandas pyarrow requests"
+      AIRFLOW__WEBSERVER__SECRET_KEY: e563694d57a16a20b88c03405ac68eeb6b95bce6390328d13fdb21ab5ee18003
+      _PIP_ADDITIONAL_REQUIREMENTS: "psycopg2-binary dbt-core dbt-postgres pandas pyarrow requests"
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./dbt:/opt/airflow/dbt
@@ -50,8 +50,8 @@ services:
     environment:
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://dbuser:dbpass@postgres:5432/nyc
-      AIRFLOW__WEBSERVER__SECRET_KEY: supersecret
-      _PIP_ADDITIONAL_REQUIREMENTS: "psycopg2-binary pandas pyarrow requests"
+      AIRFLOW__WEBSERVER__SECRET_KEY: e563694d57a16a20b88c03405ac68eeb6b95bce6390328d13fdb21ab5ee18003
+      _PIP_ADDITIONAL_REQUIREMENTS: "psycopg2-binary dbt-core dbt-postgres pandas pyarrow requests"
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./dbt:/opt/airflow/dbt
@@ -70,7 +70,8 @@ services:
     environment:
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://dbuser:dbpass@postgres:5432/nyc
-      _PIP_ADDITIONAL_REQUIREMENTS: "psycopg2-binary pandas pyarrow requests"
+      AIRFLOW__WEBSERVER__SECRET_KEY: e563694d57a16a20b88c03405ac68eeb6b95bce6390328d13fdb21ab5ee18003
+      _PIP_ADDITIONAL_REQUIREMENTS: "psycopg2-binary dbt-core dbt-postgres pandas pyarrow requests"
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./dbt:/opt/airflow/dbt
