@@ -28,7 +28,7 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://dbuser:dbpass@postgres:5432/nyc
       AIRFLOW__LOGGING__ALLOW_FALLBACK_TO_LOCAL_LOGS: "True"
-      AIRFLOW__WEBSERVER__SECRET_KEY: "e563694d57a16a20b88c03405ac68eeb6b95bce6390328d13fdb21ab5ee18003"
+      AIRFLOW__WEBSERVER__SECRET_KEY: $(AIRFLOW__WEBSERVER__SECRET_KEY)
       _PIP_ADDITIONAL_REQUIREMENTS: "psycopg2-binary dbt-core dbt-postgres pandas pyarrow requests"
     volumes:
       - ./airflow/dags:/opt/airflow/dags
@@ -51,7 +51,7 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://dbuser:dbpass@postgres:5432/nyc
       AIRFLOW__LOGGING__ALLOW_FALLBACK_TO_LOCAL_LOGS: "True"
-      AIRFLOW__WEBSERVER__SECRET_KEY: "e563694d57a16a20b88c03405ac68eeb6b95bce6390328d13fdb21ab5ee18003"
+      AIRFLOW__WEBSERVER__SECRET_KEY: $(AIRFLOW__WEBSERVER__SECRET_KEY)
       AIRFLOW__CORE__HOSTNAME_CALLABLE: "socket:gethostname"
       _PIP_ADDITIONAL_REQUIREMENTS: "psycopg2-binary dbt-core dbt-postgres pandas pyarrow requests"
     volumes:
@@ -74,7 +74,7 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://dbuser:dbpass@postgres:5432/nyc
       AIRFLOW__LOGGING__ALLOW_FALLBACK_TO_LOCAL_LOGS: "True"
-      AIRFLOW__WEBSERVER__SECRET_KEY: "e563694d57a16a20b88c03405ac68eeb6b95bce6390328d13fdb21ab5ee18003"
+      AIRFLOW__WEBSERVER__SECRET_KEY: $(AIRFLOW__WEBSERVER__SECRET_KEY)
       AIRFLOW__CORE__HOSTNAME_CALLABLE: "socket:gethostname"
       _PIP_ADDITIONAL_REQUIREMENTS: "psycopg2-binary dbt-core dbt-postgres pandas pyarrow requests"
     volumes:
