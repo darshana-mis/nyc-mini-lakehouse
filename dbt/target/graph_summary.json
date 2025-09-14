@@ -1,0 +1,1 @@
+{"_invocation_id": "310fa0f8-ef76-45cb-9c39-d1cc1da88016", "linked": {"0": {"name": "model.nyc_taxi.fct_trip_metrics", "type": "model"}, "1": {"name": "model.nyc_taxi.stg_trips", "type": "model", "succ": [0]}}}
