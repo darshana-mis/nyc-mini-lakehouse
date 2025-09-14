@@ -43,22 +43,6 @@ flowchart LR
 - Power BI: Enterprise-ready dashboarding.
 - Python: Ingestion logic and operator code.
 
-📂 Project Structure
-  ```bash
-  nyc-mini-lakehouse/
-  │── airflow/                # Airflow DAGs
-  │    └── dags/nyc_yellow_to_postgres_dag.py
-  │── dbt/                    # dbt models & configs
-  │    ├── models/staging/stg_trips.sql
-  │    └── models/marts/fct_trip_metrics.sql
-  │── scripts/                # Initialization SQL
-  │    └── init_postgres.sql
-  │── sql/                    # Extra reporting views
-  │    └── create_views.sql
-  │── docker-compose.yml      # Docker setup for Airflow, Postgres, Metabase
-  └── README.md               # Project documentation
-  ```
-
 ## 🚀 How It Works
 
 ### 1. Docker Compose spins up Postgres, Airflow, and Metabase in containers.
