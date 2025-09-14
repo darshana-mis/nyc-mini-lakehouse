@@ -24,12 +24,6 @@ This project demonstrates a real-world, end-to-end data engineering pipeline bui
 
 ## 🏗️ Architecture Diagram
 
-flowchart LR
-  A[NYC Taxi Data (Parquet)] -->|Airflow DAG download| B[Postgres: staging.yellow_trips]
-  B -->|dbt stg_trips| C[staging.stg_trips]
-  C -->|dbt fct_trip_metrics| D[marts.fct_trip_metrics]
-  D -->|Metabase/Power BI| E[Dashboards & Reports]
-
   <img width="2538" height="1263" alt="image" src="https://github.com/user-attachments/assets/d0789447-da19-47a4-9b58-5d2487b4934b" />
 
 
